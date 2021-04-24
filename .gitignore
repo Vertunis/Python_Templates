@@ -1,0 +1,5 @@
+$ cat .gitignore
+# Folgende Ordner sollen nicht betrachtet werden
+/.idea/**/*
+/venv/**/*
+/02_Testprojekte/**/*
