@@ -1,7 +1,7 @@
 # Ziel dieser Case Study ist die Datenverarbeitung von Excel mit dem OneHot Encoder
 # Außerdem soll hier klar gemacht werden, wann man den Ordinal- und One_hot-Encoder verwendet wird
 
-# Adult Datensatz in XCEL Datei mit verschiedenen Features in Spaleten i bis j
+# Adult Datensatz in XCEL Datei mit verschiedenen Features in Spalten i bis j
 # Basierend auf Features sollen wir eine Klassifikation durchführen mit dem Ziel herauszufinden,
 # ob die jeweilige Person weniger als 50.000 Dollar verdient oder mehr als 50.000
 

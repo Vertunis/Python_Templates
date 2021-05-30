@@ -36,6 +36,17 @@ print(c)
 c = [i**2 if i% 2 == 0 else -1 for i in range(20) ] # So sieht mit if UND else aus
 print(c)
 
+# Beispiel 5: Vergleich von 2 Vektoren mit verUndung
+y_true = np.array([0,1,0,1])
+y_pred = np.array([1,1,1,1])
+
+logic = y_true == y_pred
+print(logic)
+
+logic2 = [1 for y_t, y_p in zip(y_true, y_pred) if y_t ==  y_p]
+print(logic2)
+
+
 #Erläuterung inline if else
 a = None
 s = 'hier kommt ein '+(a if a != None else '')+' string'
