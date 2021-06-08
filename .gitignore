@@ -3,3 +3,4 @@ $ cat .gitignore
 /.idea/**/*
 /venv/**/*
 /02_Testprojekte/**/*
+/01_Tutorials/Udemy Kurs Deep Learning/venv/**/*
