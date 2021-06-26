@@ -20,7 +20,7 @@ if __name__ == "__main__":
     w = 1
     b = -4
     # shift = 2 ; Shift der Aktivierungsfunktion im Bild
-    act_fn = sigmoid
+    act_fn = sigmoid # sigmoid || relu eingeben
 
     x = np.linspace(start=-10, stop=10, num=5000)
     y_act = np.array([act_fn(xi * w + b) for xi in x])
@@ -33,6 +33,6 @@ if __name__ == "__main__":
 
     plt.plot((0,-b/w),(0.5,0.5), c='black',linestyle="--", label='Shift: -b/w') # Plot des Shifts
 
-    plt.legend(loc='lower right')
+    plt.legend(loc='upper left')
 
     plt.show()
