@@ -1,4 +1,4 @@
-# In dieser Datei wird ein Keras Modell erstellt, welches Grafisch die Aktivierungsfunktionen darstellen
+# In dieser Datei wird ein Keras Modell erstellt, welches Grafisch die Aktivierungsfunktionen darstellen. Dabei werden mehrere Gewichte betrachtet
 
 from typing import Tuple
 
@@ -72,7 +72,7 @@ if __name__ == "__main__":
         plt.title("Num weights: " + str(i))
         plt.grid(True)
         ax1.plot(x, y, color="blue", label='zu approximierendes Dataset')  # Plottet das Dataset
-        ax1.plot(x.flatten(), y_output.flatten(), color="red", label= f'Output NN nach {i} Epchos') # Mit Flatten die Matrizen in Vektoren umwandeln für plt Funktion
+        ax1.plot(x.flatten(), y_output.flatten(), color="red", label= f'Approximiertes Dataset (Output NN) mit {i} Weights') # Mit Flatten die Matrizen in Vektoren umwandeln für plt Funktion
         ax2.plot(x, y_relu.T[-1], label= f'Output Relu-Layer') # Transponieren und von der Matrix immer den letzten Eintrag nehmen
 
         legend = ax1.legend(loc='upper left')

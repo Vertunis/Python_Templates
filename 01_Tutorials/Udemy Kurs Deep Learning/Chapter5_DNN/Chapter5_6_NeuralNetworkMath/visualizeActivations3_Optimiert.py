@@ -11,7 +11,9 @@ from tensorflow.keras.optimizers import Adam
 
 
 def f(x: float) -> float:
-    return x ** 4 + -5 * x ** 3 + 14 * x ** 2 + x + 10
+
+    #return x**2 + x + 10  # Einfache Funktion
+    return x ** 4 + -5 * x ** 3 + 14 * x ** 2 + x + 10  # Schwerere Funktion
 
 
 def relu(x: float) -> float:
@@ -41,6 +43,8 @@ def build_model2() -> Sequential: # mit Relu Aktivierungsfunktion
     model.add(Activation("relu"))  # ReLU vom Hidden
     model.add(Dense(500))  # Input zu Hidden
     model.add(Activation("relu"))  # ReLU vom Hidden
+    model.add(Dense(500))  # Input zu Hidden
+    model.add(Activation("relu"))  # ReLU vom Hidden
     model.add(Dense(1))  # Vom Hidden zum Output
     return model
 
@@ -48,6 +52,8 @@ def build_model2() -> Sequential: # mit Relu Aktivierungsfunktion
 def build_model3() -> Sequential: # mit Sigmoid Aktivierungsfunktion
     model = Sequential()
     model.add(Dense(500))  # Input zu Hidden
+    model.add(Activation("sigmoid"))  # ReLU vom Hidden
+    model.add(Dense(200))  # Input zu Hidden
     model.add(Activation("sigmoid"))  # ReLU vom Hidden
     model.add(Dense(500))  # Input zu Hidden
     model.add(Activation("sigmoid"))  # ReLU vom Hidden
@@ -82,7 +88,7 @@ if __name__ == "__main__":
     # Betrachtung Modell 3
     ##################################
     model3 = build_model3()
-    model3.compile(optimizer=Adam(learning_rate=1e-2),
+    model3.compile(optimizer=Adam(learning_rate=10e-2),
                    loss="mse"
                   )
     model3.fit(x, y, epochs=30)
