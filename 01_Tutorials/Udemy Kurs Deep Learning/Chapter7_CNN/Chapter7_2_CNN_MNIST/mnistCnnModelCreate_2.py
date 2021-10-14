@@ -37,7 +37,7 @@ def build_model(img_shape: Tuple[int, int, int], num_classes: int) -> Sequential
     model.add(Conv2D(filters=16, kernel_size=3, padding="same", strides=1, input_shape=img_shape))  # Filter + kernel  muss bei Conv2D immer angegeben werden
     model.add(Activation("relu"))
 
-    model.add(MaxPooling2D()) # Reduzierung der Komplexität des bildes -> 3 Parameter: Poolsize(Größe des Poolings); Strides = 2
+    model.add(MaxPooling2D()) # Reduzierung der Komplexität des bildes -> 3 Parameter: Poolsize(Größe des Poolings); Strides = 2 (Man will doppelte Werte vermeiden, daher 2)-> Defaultwerte siehe Doku
 
     model.add(Conv2D(filters=16, kernel_size=3))  # Filter + kernel  muss bei Conv2D immer angegeben werden
     model.add(Activation("relu"))

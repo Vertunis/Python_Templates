@@ -24,3 +24,6 @@ y = np.reshape(x, (3, 2))
 
 print(x)
 print(y)
+
+x_test = x.reshape(-1, 1).astype(np.float32) # -1 gib die Dimension des Freiheitsgrad an stelle x0 an. Sprich x1 gibt vor und x0 passt sich frei an.
+print(x_test)

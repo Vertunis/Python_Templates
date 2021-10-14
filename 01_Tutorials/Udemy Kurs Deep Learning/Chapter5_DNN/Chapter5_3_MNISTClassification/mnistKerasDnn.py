@@ -19,7 +19,9 @@ def prepare_Dataset(num_features: int, num_targets: int):
     (x_train, y_train), (x_test, y_test) = mnist.load_data()  # Lädt Datensatz aus Inet herunter
 
     # Umformatierung der Datentypen nach Float32
+    #print(x_train.shape)
     x_train = x_train.reshape(-1, num_features).astype(np.float32) # Zwingt das Format in eine Spalte  -> Keras erwartet Shape.(X, 1)
+    #print(x_train.shape)
     x_test = x_test.reshape(-1, num_features).astype(np.float32) # Zwingt das Format in eine Spalte  -> Keras erwartet Shape.(X, 1)
 
     y_train = to_categorical(y_train, num_classes=num_targets, dtype=np.float32)  # ONEHOT Vektor. Klassifikation kommen duetlich besser klar wenn die y-Werte als OneHot Vektor vorliegen

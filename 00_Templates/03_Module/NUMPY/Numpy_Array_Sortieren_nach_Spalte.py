@@ -12,4 +12,14 @@ for i in range(new_list.shape[0]):
     #print(i)
     new_list[i] = myList[ind_sort[i]]
 
+################################################
+#  Bessere Variante für Multidimensionale Arrays
+################################################
+myList_2 = np.array([[7, 3, 5],
+                     [2, 1, 7],
+                     [6, 1, 7]])
+ind_sort = myList_2[:, 0].argsort(kind='stable')  # Sortiert nach erster Spalte von myList_2
+#ind_sort = np.argsort(myList_2[:, 0], kind='stable', axis=0) # Alternative Schreibweise
+myList_2 = myList[ind_sort]
+
 print("Fertig")
