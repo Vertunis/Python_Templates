@@ -6,7 +6,7 @@ class Tier:
     geschlecht = ""
     alter = 0
 
-    def __init__(self, rasse, geschlecht, alter):
+    def __init__(self, rasse, geschlecht, alter): # Die Variablen können innerhalb einer Inszanz nur aufgerufen werden, wenn sie hier deklariert wurden z.B. hund_1.rasse
         self.rasse = rasse
         self.geschlecht = geschlecht
         self.alter = alter
